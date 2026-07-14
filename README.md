@@ -1,5 +1,7 @@
 # App Lista de Compras
 
+![Ícone do app](assets/images/icon.png)
+
 Aplicativo mobile desenvolvido com React Native, Expo e TypeScript para organizar itens de compra, lojas e estoque da dispensa.
 
 ## Visão geral
