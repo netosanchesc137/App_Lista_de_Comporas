@@ -1,50 +1,73 @@
-# Welcome to your Expo app 👋
+# App Lista de Compras
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Aplicativo mobile desenvolvido com React Native, Expo e TypeScript para organizar itens de compra, lojas e estoque da dispensa.
 
-## Get started
+## Visão geral
 
-1. Install dependencies
+O projeto foi criado para facilitar o controle de compras do dia a dia. Com ele, é possível:
 
-   ```bash
-   npm install
-   ```
+- cadastrar itens com nome, quantidade e loja associada
+- organizar itens por loja
+- mover itens sem loja para uma loja cadastrada
+- adicionar compras à dispensa
+- controlar o estoque da dispensa separadamente da lista de compras
+- editar quantidades diretamente nas telas principais
 
-2. Start the app
+## Funcionalidades
 
-   ```bash
-   npx expo start
-   ```
+- Cadastro e edição de itens
+- Cadastro, edição e exclusão de lojas
+- Tela de detalhes por loja
+- Controle de itens sem loja
+- Fluxo de compra com envio para a dispensa
+- Atualização manual das quantidades na dispensa
+- Documentação interna para manutenção futura
 
-In the output, you'll find options to open the app in a
+## Tecnologias utilizadas
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+- React Native
+- Expo
+- TypeScript
+- Expo Router
+- Context API
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## Estrutura principal
 
-## Get a fresh project
+- `app/`: telas e navegação do aplicativo
+- `context/`: gerenciamento de estado global
+- `components/`: componentes reutilizáveis
+- `assets/`: imagens e arquivos estáticos
 
-When you're ready, run:
+## Como executar o projeto
+
+1. Instale as dependências:
 
 ```bash
-npm run reset-project
+npm install
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+2. Inicie o projeto:
 
-## Learn more
+```bash
+npx expo start
+```
 
-To learn more about developing your project with Expo, look at the following resources:
+3. Abra no dispositivo desejado:
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+- Expo Go no celular
+- navegador web
+- emulador Android
 
-## Join the community
+## Observações
 
-Join our community of developers creating universal apps.
+- O app utiliza Context API para separar a lógica de itens, lojas e dispensa.
+- A dispensa mantém seu próprio estoque e não depende diretamente da quantidade planejada para compra.
+- Existe um guia técnico complementar em `README-DEV.md` para manutenção do código.
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+## Build e publicação
+
+O projeto já possui arquivo `eas.json`, permitindo evolução futura para builds com Expo Application Services (EAS).
+
+## Autor
+
+Desenvolvido por Neto Uchoa.
